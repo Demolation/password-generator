@@ -17,8 +17,8 @@ sum=float(a + b)
 multiple=float(a * b)
 division=float(a/b)
 
-print("The sum of all of them is ", sum)
-print("The multiplication of all the numbers is ", multiple)
-print("The division of all numbers is ", division)
+print(f"The sum of all of them is  {sum:.2f}")
+print(f"The multiplication of all the numbers is {multiple:.2f}")
+print(f"The division of all numbers is {division:.4f}")
 print()
 
