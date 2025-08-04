@@ -1,3 +1,10 @@
+import math
+
+def total_sqrt():
+    print("The square root of the sum of the number is ", round(float(math.sqrt(a + b))) )
+    print()
+    
+
 a=input("Enter the first number: ")
 b=input("Enter the second number: ")
 print()
@@ -20,5 +27,7 @@ division=float(a/b)
 print(f"The sum of all of them is  {sum:.2f}")
 print(f"The multiplication of all the numbers is {multiple:.2f}")
 print(f"The division of all numbers is {division:.4f}")
+total_sqrt()
+
 print()
 
