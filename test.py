@@ -1,8 +1,16 @@
 import math
 
+def starter():
+    print("Choose which operation to get done")
+    print("Addition(+)")
+    print("Subtraction(-)")
+    print()
+
 def total_sqrt():
     print("The square root of the sum of the number is ", round(float(math.sqrt(a + b))) )
     print()
+
+
     
 
 a=input("Enter the first number: ")
