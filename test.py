@@ -1,41 +1,41 @@
-import math
+def add(n1, n2):
+    return  n1 + n2
 
-def starter():
-    print("Choose which operation to get done")
-    print("Addition(+)")
-    print("Subtraction(-)")
-    print()
+def sub(n1, n2):
+    return n1 - n2
 
-def total_sqrt():
-    print("The square root of the sum of the number is ", round(float(math.sqrt(a + b))) )
-    print()
+def mul(n1, n2):
+    return n1 * n2
+
+def div(n1, n2):
+    return n1/n2
+
+print("Please select the operation below\n" \
+"1. Addition\n" \
+"2. Subtraction\n" \
+"3. Multiplication\n" \
+"4. Divisions")
+print("")
 
 
-    
 
-a=input("Enter the first number: ")
-b=input("Enter the second number: ")
-print()
-a=float(a)
-b=float(b)
+operations = {
+    "1": ("Addition", add),
+    "2": ("Subtraction", sub),
+    "3": ("Multiplication", mul),
+    "4": ("Division", div)
+}
 
-if a > b:
-    print("The first number is greater than the second number.")
-elif a == b:
-    print("The first number is the same as the second number.")
+sel = input("Please choose a number (1-4):")
+
+n1 = float(input("Please input the first number: "))
+n2 = float(input("Please input the second number: "))
+
+for key in operations:
+    if sel == key:
+        name, func = operations[key]
+        print(f"Your operation is {name}")
+        print("Result:", func(n1, n2))
+        break
 else:
-    print("The second number is greater than the first number.")
-
-print()
-
-sum=float(a + b)
-multiple=float(a * b)
-division=float(a/b)
-
-print(f"The sum of all of them is  {sum:.2f}")
-print(f"The multiplication of all the numbers is {multiple:.2f}")
-print(f"The division of all numbers is {division:.4f}")
-total_sqrt()
-
-print()
-
+    print("Invalid choice")
